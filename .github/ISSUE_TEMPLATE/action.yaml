@@ -1,21 +1,16 @@
 name: Action Item
-description: Track a task that needs to be completed.
+description: Create a task or action item.
 title: "[ACTION]: "
-labels: ["action-item"]
-body:
-  - type: input
-    id: title
-    attributes:
-      label: Task Title
-      placeholder: Brief task title
-    validations:
-      required: true
+labels: ["action"]
+projects: ["sand-reco-board"]
 
+body:
   - type: textarea
     id: description
     attributes:
-      label: Task Description
-      placeholder: Describe the action item and expected outcome
+      label: Action Summary
+      description: Short description of what needs to be done.
+      placeholder: "Brief description of the task..."
     validations:
       required: true
 
@@ -31,23 +26,31 @@ body:
       label: Priority
       options:
         - Low
-        - Medium
         - High
 
   - type: input
-    id: due_date
+    id: deadline
     attributes:
-      label: Due Date
-      placeholder: YYYY-MM-DD
+      label: Deadline
+      description: Optional due date.
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: false
 
   - type: textarea
-    id: linked_issue
+    id: dependencies
     attributes:
-      label: Linked Issue / Context
-      placeholder: Reference related issues or work items
-
+      label: Dependencies
+      description: Related issues or actions.
+      placeholder: "- #123\n- #456"
+    validations:
+      required: false
+      
   - type: textarea
     id: notes
     attributes:
-      label: Notes
-      placeholder: Additional details
+      label: Additional Notes
+      placeholder: "Any supporting information..."
+    validations:
+      required: false
+      
