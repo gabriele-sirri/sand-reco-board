@@ -1,0 +1,64 @@
+name: Project Issue
+description: Log a problem, blocker, or risk.
+title: "[ISSUE]: "
+labels: ["issue"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: Short issue title
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description / Problem Statement
+      placeholder: Describe the issue clearly
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Impact / Severity
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce / Evidence
+      placeholder: Add steps or evidence
+      render: markdown
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution (Optional)
+      render: markdown
+
+  - type: input
+    id: due_date
+    attributes:
+      label: Due Date
+      placeholder: YYYY-MM-DD
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Related Items / Dependencies
+      placeholder: Link to related issues or pull requests
