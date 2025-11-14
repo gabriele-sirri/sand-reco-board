@@ -2,7 +2,7 @@ name: Action Item
 description: Create a task or action item.
 title: "[ACTION]: "
 labels: ["action"]
-projects: ["sand-reco-board"]
+projects: ["gabriele-sirri/sand-reco-board"]
 
 body:
   - type: textarea
