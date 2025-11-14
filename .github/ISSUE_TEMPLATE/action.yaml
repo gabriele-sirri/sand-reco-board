@@ -3,7 +3,6 @@ description: Create a task or action item.
 title: "[ACTION]: "
 labels: ["action"]
 projects: ["gabriele-sirri/3"]
-status: "ToDo"
 
 body:
   - type: textarea
